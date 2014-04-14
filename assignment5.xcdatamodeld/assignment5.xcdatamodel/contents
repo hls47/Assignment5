@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="3401" systemVersion="13B42" minimumToolsVersion="Xcode 4.3" macOSVersion="Automatic" iOSVersion="Automatic">
+    <entity name="Cart" representedClassName="Cart" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="contains" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Fruit" inverseName="containedBy" inverseEntity="Fruit" syncable="YES"/>
+    </entity>
+    <entity name="Fruit" representedClassName="Fruit" syncable="YES">
+        <attribute name="color" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="shape" optional="YES" attributeType="String" syncable="YES"/>
+        <relationship name="containedBy" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Cart" inverseName="contains" inverseEntity="Cart" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Fruit" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="Cart" positionX="0" positionY="0" width="0" height="0"/>
+    </elements>
+</model>
